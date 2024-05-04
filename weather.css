@@ -3,8 +3,9 @@ body {
   max-height: 600px;
   margin: 0 auto;
   background-color: #e1eaf4;
-  background-image: url('/img/bg.jpg');
+  background-image: url('./img/background.jpg');
   background-size: cover; 
+  background-position: center;
   background-repeat: no-repeat; 
   color: #ffffff;
   text-shadow: 2px 2px 4px #000000;
