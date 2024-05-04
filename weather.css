@@ -2,8 +2,12 @@ body {
   max-width: 780px;
   max-height: 600px;
   margin: 0 auto;
-  background-color: #eae6e2;
-  color: #444e54;
+  background-color: #e1eaf4;
+  background-image: url('/img/bg.jpg');
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  color: #ffffff;
+  text-shadow: 2px 2px 4px #000000;
 }
 
 main {
@@ -107,7 +111,7 @@ span {
 
 a {
   text-decoration: none;
-  color: #0a95c9;
+  color: #ffffff;
 }
 
 a:hover {

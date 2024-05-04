@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="./img/icon.png" type="image/x-icon">
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Oxygen+Mono&display=swap"
       rel="stylesheet"
@@ -18,7 +19,7 @@
     />
     <link rel="stylesheet" href="weather.css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <title>Weather App</title>
+    <title>Weather Search</title>
   </head>
   <body>
     <main>
@@ -40,7 +41,7 @@
             class="col d-flex justify-content-center align-items-center city-title"
             id="searched-city"
           >
-            Weather
+            Weather Search
           </h1>
         </div>
         <span class="measurements">
@@ -69,50 +70,23 @@
         <hr/>
       </section>
 
-      <!--5 day forecast-->
+      <!--Forecast API-->
       <section class="container">
-        <div class="row week-forecast">
-          <div class="col">
-            <h3>Fri</h3>
-            <br /><img
-              src="https://img.icons8.com/color-glass/42/000000/rain.png"
-            /><br />
-            <p class="weather">Rain</p>
-            <span>2°</span>
-          </div>
-          <div class="col">
-            <h3>Sat</h3>
-            <br /><img
-              src="https://img.icons8.com/color-glass/42/000000/cloud.png"
-            /><br />
-            <p class="weather">Cloudy</p>
-            <span>4°</span>
-          </div>
-          <div class="col">
-            <h3>Sun</h3>
-            <br /><img
-              src="https://img.icons8.com/color-glass/42/000000/partly-cloudy-day.png"
-            /><br />
-            <p class="weather">Partly cloudy</p>
-            <span>6°</span>
-          </div>
-          <div class="col">
-            <h3>Mon</h3>
-            <br /><img
-              src="https://img.icons8.com/color-glass/42/000000/sun.png"
-            /><br />
-            <p class="weather">Sunny</p>
-            <span>8°</span>
-          </div>
-          <div class="col">
-            <h3>Tues</h3>
-            <br /><img
-              src="https://img.icons8.com/color-glass/42/000000/wind.png"
-            /><br />
-            <p class="weather">Windy</p>
-            <span>5°</span>
-          </div>
-        </div>
+        <div class="weather-widget-container">
+          <a class="weatherwidget-io" href="https://forecast7.com/en/10d75106d68/ho-chi-minh/" 
+              data-label_1="HO CHI MINH" data-label_2="Weather" data-font="Noto Serif" 
+              data-theme="white_leather">HO CHI MINH Weather</a>
+          <script>
+              !function(d,s,id){
+                var js,fjs=d.getElementsByTagName(s)[0];
+                if(!d.getElementById(id)){js=d.createElement(s);
+                  js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';
+                  fjs.parentNode.insertBefore(js,fjs);
+                }}
+                (document,'script','weatherwidget-io-js');
+          </script>
+      </div>
+      <!--5 day forecast-->
       </section>
     </main>
     <script src="weather.js"></script>
